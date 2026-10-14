@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>document.documentElement.classList.add('js');</script>
+
+  <title>FABE Fitness | Gimnasio equipado y canchas de pádel techadas</title>
+  <meta name="description" content="FABE Fitness: gimnasio totalmente equipado y canchas de pádel techadas en un mismo lugar. Consultá por membresías y reservá tu turno por WhatsApp.">
+  <meta name="theme-color" content="#101113">
+  <!-- La etiqueta canonical se genera desde script.js cuando se completa CONFIG.domain -->
+
+  <!-- Open Graph (para compartir en redes). Completar og:url y og:image con el dominio real al publicar. -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_AR">
+  <meta property="og:site_name" content="FABE Fitness">
+  <meta property="og:title" content="FABE Fitness | Gimnasio equipado y canchas de pádel techadas">
+  <meta property="og:description" content="Entrená en un gimnasio totalmente equipado y jugá al pádel en canchas techadas. Consultá y reservá por WhatsApp.">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" type="image/png" href="imagenes/favicon.png">
+  <link rel="apple-touch-icon" href="imagenes/favicon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Iconos SVG (sprite) -->
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true" focusable="false">
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  <symbol id="i-prev" viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-next" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12l5 5 9-10" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-dumbbell" viewBox="0 0 24 24"><path d="M6.5 6.5v11M17.5 6.5v11M3 9v6M21 9v6M6.5 12h11" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  <symbol id="i-roof" viewBox="0 0 24 24"><path d="M3 11.5L12 4l9 7.5M5.5 10v10h13V10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-two" viewBox="0 0 24 24"><circle cx="9" cy="12" r="6" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="15" cy="12" r="6" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+  <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 3L5 14h6l-1 7 8-11h-6z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-11a7 7 0 10-14 0c0 4.8 7 11 7 11z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.5" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 7v5l3 2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+  <symbol id="i-calendar" viewBox="0 0 24 24"><path d="M4 6h16v14H4zM4 10h16M8 3v4M16 3v4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-court" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="1" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 5v14M3 12h18" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+  <symbol id="i-tag" viewBox="0 0 24 24"><path d="M3 12V4h8l10 10-8 8z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="7.5" cy="8.5" r="1.3" fill="currentColor"/></symbol>
+  <symbol id="i-zoom" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6" fill="none" stroke="currentColor" stroke-width="2"/><path d="M21 21l-5-5M11 8v6M8 11h6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  <symbol id="i-link" viewBox="0 0 24 24"><path d="M10 14a4 4 0 005.7 0l3-3a4 4 0 00-5.7-5.7l-1 1M14 10a4 4 0 00-5.7 0l-3 3a4 4 0 005.7 5.7l1-1" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  <symbol id="i-instagram" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.2" cy="6.8" r="1.2" fill="currentColor"/></symbol>
+  <symbol id="i-facebook" viewBox="0 0 24 24"><path d="M14 8h3V4h-3a4 4 0 00-4 4v3H7v4h3v6h4v-6h3l1-4h-4V8z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+  <symbol id="i-whatsapp" viewBox="0 0 24 24"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></symbol>
+</svg>
+
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+<!-- ============ SECCIÓN 1. ENCABEZADO Y NAVEGACIÓN ============ -->
+<header class="site-header" id="top">
+  <div class="container header-inner">
+    <a class="brand" href="#inicio" aria-label="FABE Fitness, ir al inicio">
+      <img src="imagenes/logo-fabe.png" width="56" height="56" alt="Logotipo de FABE Fitness" data-img="logo">
+      <span class="brand-name">FABE <em>FITNESS</em></span>
+    </a>
+
+    <nav class="main-nav" id="main-nav" aria-label="Navegación principal">
+      <ul>
+        <li><a href="#gimnasio">Gimnasio</a></li>
+        <li><a href="#padel">Pádel</a></li>
+        <li><a href="#galeria">Galería</a></li>
+        <li><a href="#planes">Planes y tarifas</a></li>
+        <li><a href="#ubicacion">Ubicación y contacto</a></li>
+      </ul>
+      <a class="btn btn-primary btn-sm nav-cta" href="#" data-wa="general">
+        <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+        Consultá por WhatsApp
+      </a>
+    </nav>
+
+    <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Abrir menú">
+      <svg class="icon icon-open" aria-hidden="true"><use href="#i-menu"/></svg>
+      <svg class="icon icon-close" aria-hidden="true"><use href="#i-close"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="contenido">
+
+  <!-- ============ SECCIÓN 2. PORTADA (HERO) ============ -->
+  <section class="hero" id="inicio" aria-labelledby="hero-title">
+    <div class="hero-media img-frame">
+      <img src="imagenes/portada-gimnasio.jpg" width="1920" height="1080" alt="Sala de entrenamiento del gimnasio de FABE Fitness" fetchpriority="high" decoding="async" data-img="portada">
+    </div>
+    <div class="hero-overlay" aria-hidden="true"></div>
+    <div class="container hero-content">
+      <p class="eyebrow">Entrenamiento · Deporte · Bienestar</p>
+      <h1 id="hero-title">Superá tus <span class="accent">límites.</span></h1>
+      <p class="hero-text">Todo lo que necesitás para entrenar, mantenerte activo y disfrutar del deporte en un mismo lugar.</p>
+      <div class="btn-row">
+        <a class="btn btn-primary" href="#gimnasio">Conocé el gimnasio</a>
+        <a class="btn btn-outline" href="#padel">Reservá tu cancha</a>
+      </div>
+    </div>
+    <a class="scroll-hint" href="#gimnasio" aria-label="Desplazarse a la siguiente sección"><span></span></a>
+  </section>
+
+  <!-- ============ SECCIÓN 3. PRESENTACIÓN DEL GIMNASIO ============ -->
+  <section class="section section-dark" id="gimnasio" aria-labelledby="gym-title">
+    <div class="container split">
+      <div class="split-text reveal">
+        <p class="eyebrow">El gimnasio</p>
+        <h2 id="gym-title">Entrená a tu manera.</h2>
+        <p class="lead">Encontrá tu espacio para entrenar, trabajar por tus objetivos y disfrutar de una experiencia deportiva a tu ritmo.</p>
+        <p>Un gimnasio totalmente equipado, pensado para que entrenes con comodidad y a tu propio ritmo.</p>
+
+        <h3 class="list-title">Servicios del gimnasio</h3>
+        <ul class="check-list" id="gym-services">
+          <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Gimnasio totalmente equipado</li>
+        </ul>
+        <p class="note" id="gym-services-note">Consultanos por servicios, actividades y horarios disponibles.</p>
+
+        <a class="btn btn-primary" href="#" data-wa="gym">Consultá por tu membresía</a>
+      </div>
+
+      <div class="gym-gallery reveal">
+        <figure class="gym-main img-frame">
+          <img src="imagenes/gimnasio-01.jpg" width="1200" height="900" alt="Vista general del gimnasio de FABE Fitness" loading="lazy" decoding="async" data-img="gimnasio1">
+          <figcaption>Sala de entrenamiento</figcaption>
+        </figure>
+        <figure class="gym-sub img-frame">
+          <img src="imagenes/equipamiento-01.jpg" width="800" height="600" alt="Máquinas del gimnasio de FABE Fitness" loading="lazy" decoding="async" data-img="equipamiento1">
+          <figcaption>Máquinas</figcaption>
+        </figure>
+        <figure class="gym-sub img-frame">
+          <img src="imagenes/equipamiento-02.jpg" width="800" height="600" alt="Equipamiento de entrenamiento de FABE Fitness" loading="lazy" decoding="async" data-img="equipamiento2">
+          <figcaption>Equipamiento</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECCIÓN 4. CANCHAS DE PÁDEL TECHADAS ============ -->
+  <section class="section section-cement" id="padel" aria-labelledby="padel-title">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">Canchas de pádel techadas</p>
+        <h2 id="padel-title">El pádel se disfruta más en FABE.</h2>
+        <p class="lead">Disfrutá del juego y compartí cada partido en nuestras canchas de pádel techadas.</p>
+      </div>
+
+      <div class="padel-layout">
+        <figure class="padel-featured img-frame reveal">
+          <img src="imagenes/padel-01.jpg" width="1400" height="933" alt="Cancha de pádel techada de FABE Fitness" loading="lazy" decoding="async" data-img="padel1">
+        </figure>
+
+        <div class="padel-info reveal">
+          <ul class="facts">
+            <li>
+              <svg class="icon" aria-hidden="true"><use href="#i-court"/></svg>
+              <div><span class="fact-label">Canchas</span><strong data-cfg="padel.courts">Consultá cantidad de canchas</strong></div>
+            </li>
+            <li>
+              <svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg>
+              <div><span class="fact-label">Horarios de funcionamiento</span><strong data-cfg="hours.padel">Consultá disponibilidad</strong></div>
+            </li>
+            <li>
+              <svg class="icon" aria-hidden="true"><use href="#i-tag"/></svg>
+              <div><span class="fact-label">Tarifa por turno</span><strong data-cfg="padel.price">Consultá tarifas</strong></div>
+            </li>
+            <li>
+              <svg class="icon" aria-hidden="true"><use href="#i-calendar"/></svg>
+              <div><span class="fact-label">Reservas</span><strong data-cfg="padel.reservations">Coordinamos tu turno por WhatsApp</strong></div>
+            </li>
+          </ul>
+          <a class="btn btn-primary" href="#" data-wa="padel">Reservá tu turno</a>
+        </div>
+      </div>
+
+      <div class="padel-thumbs reveal">
+        <figure class="img-frame">
+          <img src="imagenes/padel-02.jpg" width="900" height="600" alt="Otra vista de las canchas de pádel de FABE Fitness" loading="lazy" decoding="async" data-img="padel2">
+        </figure>
+        <figure class="img-frame">
+          <img src="imagenes/padel-03.jpg" width="900" height="600" alt="Cancha de pádel techada lista para jugar" loading="lazy" decoding="async" data-img="padel3">
+        </figure>
+        <figure class="img-frame">
+          <img src="imagenes/padel-jugadores.jpg" width="900" height="600" alt="Jugadores disputando un partido de pádel" loading="lazy" decoding="async" data-img="padelJugadores">
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECCIÓN 5. CARRUSEL DE FOTOGRAFÍAS ============ -->
+  <section class="section section-dark" id="galeria" aria-labelledby="gallery-title">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">Galería</p>
+        <h2 id="gallery-title">Conocé nuestras instalaciones.</h2>
+      </div>
+
+      <div class="filters reveal" role="group" aria-label="Filtrar fotografías por categoría">
+        <button class="chip is-active" type="button" data-filter="todas" aria-pressed="true">Todas</button>
+        <button class="chip" type="button" data-filter="gimnasio" aria-pressed="false">El gimnasio</button>
+        <button class="chip" type="button" data-filter="equipamiento" aria-pressed="false">El equipamiento</button>
+        <button class="chip" type="button" data-filter="padel" aria-pressed="false">Las canchas de pádel</button>
+      </div>
+
+      <div class="carousel reveal" id="carousel" role="region" aria-roledescription="carrusel" aria-label="Fotografías de las instalaciones">
+        <div class="carousel-viewport" id="carousel-viewport">
+          <ul class="carousel-track" id="carousel-track"></ul>
+        </div>
+        <button class="carousel-btn prev" id="carousel-prev" type="button" aria-label="Fotografía anterior">
+          <svg class="icon" aria-hidden="true"><use href="#i-prev"/></svg>
+        </button>
+        <button class="carousel-btn next" id="carousel-next" type="button" aria-label="Fotografía siguiente">
+          <svg class="icon" aria-hidden="true"><use href="#i-next"/></svg>
+        </button>
+        <div class="carousel-empty" id="carousel-empty" hidden>
+          <p>Estamos preparando las fotografías de nuestras instalaciones.</p>
+        </div>
+      </div>
+      <div class="carousel-footer reveal">
+        <div class="dots" id="carousel-dots" role="group" aria-label="Elegir fotografía"></div>
+        <p class="counter" id="carousel-counter" aria-live="polite"></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECCIÓN 6. DIFERENCIALES ============ -->
+  <section class="section section-carbon" id="diferenciales" aria-labelledby="diff-title">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">Por qué FABE</p>
+        <h2 id="diff-title">Más que entrenar. Una experiencia deportiva.</h2>
+      </div>
+      <ul class="cards-4">
+        <li class="card reveal">
+          <span class="card-icon"><svg class="icon" aria-hidden="true"><use href="#i-dumbbell"/></svg></span>
+          <h3>Gimnasio totalmente equipado</h3>
+          <p>Un espacio completo para entrenar a tu ritmo.</p>
+        </li>
+        <li class="card reveal">
+          <span class="card-icon"><svg class="icon" aria-hidden="true"><use href="#i-roof"/></svg></span>
+          <h3>Canchas de pádel techadas</h3>
+          <p>Jugá tus partidos en canchas cubiertas.</p>
+        </li>
+        <li class="card reveal">
+          <span class="card-icon"><svg class="icon" aria-hidden="true"><use href="#i-two"/></svg></span>
+          <h3>Dos alternativas deportivas</h3>
+          <p>Gimnasio y pádel en un mismo establecimiento.</p>
+        </li>
+        <li class="card reveal">
+          <span class="card-icon"><svg class="icon" aria-hidden="true"><use href="#i-bolt"/></svg></span>
+          <h3>Entrená y disfrutá</h3>
+          <p>Un lugar para moverte, jugar y mantenerte activo.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ SECCIÓN 7. PLANES, TARIFAS Y HORARIOS ============ -->
+  <section class="section section-dark" id="planes" aria-labelledby="plans-title">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">Planes, tarifas y horarios</p>
+        <h2 id="plans-title">Encontrá tu opción ideal.</h2>
+      </div>
+
+      <div class="plans-block reveal">
+        <h3 class="block-title"><svg class="icon" aria-hidden="true"><use href="#i-dumbbell"/></svg>Gimnasio</h3>
+        <div class="plans-grid" id="gym-plans"></div>
+      </div>
+
+      <div class="plans-block reveal">
+        <h3 class="block-title"><svg class="icon" aria-hidden="true"><use href="#i-court"/></svg>Pádel</h3>
+        <div class="padel-plan card">
+          <dl class="plan-details">
+            <div><dt>Precio por turno</dt><dd data-cfg="padel.price">Consultá tarifas</dd></div>
+            <div><dt>Duración del turno</dt><dd data-cfg="padel.duration">Consultá duración</dd></div>
+            <div><dt>Horarios disponibles</dt><dd data-cfg="hours.padel">Consultá disponibilidad</dd></div>
+            <div><dt>Información adicional</dt><dd data-cfg="padel.info">Escribinos y coordinamos tu turno</dd></div>
+          </dl>
+          <a class="btn btn-primary" href="#" data-wa="padel">Consultar o reservar</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECCIÓN 8. TESTIMONIOS ============ -->
+  <section class="section section-cement" id="testimonios" aria-labelledby="testi-title">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">Opiniones</p>
+        <h2 id="testi-title">Lo que dicen quienes nos eligen.</h2>
+      </div>
+      <div class="testimonials" id="testimonials"></div>
+    </div>
+  </section>
+
+  <!-- ============ SECCIÓN 9. UBICACIÓN Y GOOGLE MAPS ============ -->
+  <section class="section section-dark" id="ubicacion" aria-labelledby="loc-title">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">Ubicación</p>
+        <h2 id="loc-title">Encontranos y vení a entrenar.</h2>
+      </div>
+
+      <div class="location-layout">
+        <div class="location-info reveal">
+          <ul class="contact-list">
+            <li data-if="fullAddress">
+              <svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg>
+              <div><span class="fact-label">Dirección</span><strong data-cfg="fullAddress"></strong></div>
+            </li>
+            <li data-if="hours.general">
+              <svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg>
+              <div><span class="fact-label">Horarios de atención</span><strong data-cfg="hours.general"></strong></div>
+            </li>
+            <li data-if="phone">
+              <svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>
+              <div><span class="fact-label">Teléfono</span><a data-phone-link></a></div>
+            </li>
+          </ul>
+          <p class="note" id="location-pending">Muy pronto vas a encontrar acá la dirección y el mapa. Mientras tanto, escribinos por WhatsApp.</p>
+          <div class="btn-row">
+            <a class="btn btn-primary" href="#" id="directions-btn" target="_blank" rel="noopener">Cómo llegar</a>
+            <a class="btn btn-outline" href="#" data-wa="general">
+              <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg>WhatsApp
+            </a>
+          </div>
+          <ul class="social-list" data-social data-if="social"></ul>
+        </div>
+
+        <div class="map-wrap reveal" id="map-wrap">
+          <div class="map-placeholder" id="map-placeholder">
+            <svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg>
+            <p>El mapa se mostrará cuando se configure la dirección del establecimiento.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECCIÓN 10. CONTACTO Y LLAMADA FINAL ============ -->
+  <section class="section section-cta" id="contacto" aria-labelledby="cta-title">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">Contacto</p>
+        <h2 id="cta-title">Tu próximo entrenamiento empieza acá.</h2>
+        <p class="lead">Contactanos y conocé las opciones para entrenar o reservar tu próxima partida de pádel.</p>
+      </div>
+
+      <div class="cta-cards">
+        <article class="cta-card reveal">
+          <span class="card-icon"><svg class="icon" aria-hidden="true"><use href="#i-dumbbell"/></svg></span>
+          <h3>¿Querés entrenar?</h3>
+          <p>Consultá por planes, membresías y horarios.</p>
+          <a class="btn btn-primary" href="#" data-wa="gym">Consultar por gimnasio</a>
+        </article>
+        <article class="cta-card reveal">
+          <span class="card-icon"><svg class="icon" aria-hidden="true"><use href="#i-court"/></svg></span>
+          <h3>¿Querés jugar al pádel?</h3>
+          <p>Consultá tarifas y disponibilidad de las canchas.</p>
+          <a class="btn btn-primary" href="#" data-wa="padel">Reservar cancha</a>
+        </article>
+      </div>
+
+      <ul class="contact-strip reveal">
+        <li data-if="phone"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg><a data-phone-link></a></li>
+        <li data-if="fullAddress"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg><span data-cfg="fullAddress"></span></li>
+      </ul>
+      <ul class="social-list center" data-social data-if="social"></ul>
+    </div>
+  </section>
+</main>
+
+<!-- ============ SECCIÓN 11. PIE DE PÁGINA ============ -->
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <img src="imagenes/logo-fabe.png" width="96" height="96" alt="Logotipo de FABE Fitness" loading="lazy" data-img="logo">
+      <p class="footer-name">FABE FITNESS</p>
+      <p class="footer-tag">Gimnasio y canchas de pádel techadas.</p>
+    </div>
+
+    <nav aria-label="Navegación del pie de página">
+      <h2 class="footer-title">Explorá</h2>
+      <ul>
+        <li><a href="#gimnasio">Gimnasio</a></li>
+        <li><a href="#padel">Canchas de pádel</a></li>
+        <li><a href="#galeria">Galería</a></li>
+        <li><a href="#planes">Planes y tarifas</a></li>
+        <li><a href="#ubicacion">Ubicación y contacto</a></li>
+      </ul>
+    </nav>
+
+    <div>
+      <h2 class="footer-title">Contacto</h2>
+      <ul>
+        <li data-if="fullAddress"><span data-cfg="fullAddress"></span></li>
+        <li data-if="phone"><a data-phone-link></a></li>
+        <li><a href="#" data-wa="general">WhatsApp</a></li>
+      </ul>
+      <ul class="social-list" data-social data-if="social"></ul>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <p>&copy; <span id="year">2026</span> FABE Fitness. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+<!-- Botón flotante de WhatsApp -->
+<a class="wa-float" href="#" data-wa="general" aria-label="Escribinos por WhatsApp">
+  <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+</a>
+
+<!-- Aviso interno de configuración -->
+<div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Fotografía ampliada" hidden>
+  <button class="lb-btn lb-close" id="lb-close" type="button" aria-label="Cerrar imagen ampliada">
+    <svg class="icon" aria-hidden="true"><use href="#i-close"/></svg>
+  </button>
+  <button class="lb-btn lb-prev" id="lb-prev" type="button" aria-label="Fotografía anterior">
+    <svg class="icon" aria-hidden="true"><use href="#i-prev"/></svg>
+  </button>
+  <figure class="lb-figure">
+    <img id="lb-img" src="" alt="">
+    <figcaption id="lb-caption"></figcaption>
+  </figure>
+  <button class="lb-btn lb-next" id="lb-next" type="button" aria-label="Fotografía siguiente">
+    <svg class="icon" aria-hidden="true"><use href="#i-next"/></svg>
+  </button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

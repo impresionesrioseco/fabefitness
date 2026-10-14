@@ -1,0 +1,128 @@
+FABE FITNESS — LANDING PAGE
+===========================
+
+CÓMO VER LA PÁGINA
+------------------
+Abrí el archivo index.html con cualquier navegador (doble clic). No requiere instalar nada.
+Necesita conexión a internet solo para las tipografías (Google Fonts) y el mapa de Google.
+
+
+ESTRUCTURA DEL PROYECTO
+-----------------------
+FABE-FITNESS/
+├── index.html      (estructura y textos fijos)
+├── styles.css      (diseño y paleta)
+├── script.js       (CONFIGURACIÓN al inicio + funcionamiento)
+├── LEEME.txt       (este archivo)
+└── imagenes/
+    ├── logo-fabe.png          (YA INCLUIDO, generado desde el logo proporcionado)
+    ├── favicon.png            (YA INCLUIDO, emblema FB)
+    ├── portada-gimnasio.jpg   (PENDIENTE)
+    ├── gimnasio-01.jpg        (PENDIENTE)
+    ├── gimnasio-02.jpg        (PENDIENTE)
+    ├── gimnasio-03.jpg        (PENDIENTE)
+    ├── equipamiento-01.jpg    (PENDIENTE)
+    ├── equipamiento-02.jpg    (PENDIENTE)
+    ├── padel-01.jpg           (PENDIENTE)
+    ├── padel-02.jpg           (PENDIENTE)
+    ├── padel-03.jpg           (PENDIENTE)
+    ├── padel-jugadores.jpg    (PENDIENTE)
+    ├── instalaciones-01.jpg   (PENDIENTE)
+    └── instalaciones-02.jpg   (PENDIENTE)
+
+
+FOTOGRAFÍAS: QUÉ SUBIR Y DÓNDE SE USA
+-------------------------------------
+Copiá las fotos reales de FABE Fitness dentro de la carpeta imagenes/ con EXACTAMENTE estos nombres:
+
+  portada-gimnasio.jpg  -> Portada principal (fondo del inicio). Horizontal, ideal 1920x1080 px.
+                           Elegí una foto donde el sector izquierdo/central no tenga detalles
+                           importantes, porque ahí va el texto.
+  gimnasio-01.jpg       -> Foto principal de la sección "Entrená a tu manera" y galería.
+  gimnasio-02.jpg       -> Galería (El gimnasio).
+  gimnasio-03.jpg       -> Galería (El gimnasio).
+  equipamiento-01.jpg   -> Máquinas (sección gimnasio y galería).
+  equipamiento-02.jpg   -> Equipamiento (sección gimnasio y galería).
+  padel-01.jpg          -> Foto destacada de la cancha (sección pádel y galería).
+  padel-02.jpg          -> Miniatura de pádel y galería.
+  padel-03.jpg          -> Miniatura de pádel y galería.
+  padel-jugadores.jpg   -> Miniatura de pádel y galería.
+  instalaciones-01.jpg  -> Galería (Instalaciones).
+  instalaciones-02.jpg  -> Galería (Instalaciones).
+
+Recomendaciones:
+  - Formato JPG, ancho entre 1400 y 1920 px, peso ideal menor a 400 KB cada una.
+  - Fotos horizontales y bien iluminadas.
+  - Solo usá fotos propias o con autorización. La página no incluye fotos de ejemplo.
+
+Qué pasa si falta una foto:
+  - En la página fija se muestra un fondo neutro con la marca (sin ícono de imagen rota).
+  - En el carrusel, las fotos que no existen simplemente se omiten.
+  - Los filtros de la galería se ocultan si una categoría no tiene fotos.
+
+Para cambiar un nombre de archivo o una ruta, editá la sección "images" de CONFIG en script.js
+(y la lista GALLERY, si querés cambiar la categoría o el texto descriptivo de una foto).
+
+Texto alternativo (accesibilidad): está en el atributo alt de cada <img> de index.html y en la
+lista GALLERY de script.js. Podés ajustarlo para describir mejor cada foto real.
+
+
+CÓMO COMPLETAR LOS DATOS DEL NEGOCIO
+------------------------------------
+Abrí script.js con el Bloc de notas (o cualquier editor). Al comienzo está el objeto CONFIG.
+Completá solo lo que tengas confirmado. Lo que quede vacío se muestra como "Consultá..." y
+NO se publica nada inventado.
+
+  WHATSAPP_NUMBER    Número internacional, solo dígitos. Ej. Argentina móvil: "5493515551234"
+                     (54 + 9 + característica sin 0 + número sin 15). Mientras esté vacío,
+                     los botones de WhatsApp muestran un aviso de "configuración pendiente".
+  messages           Mensajes que se envían por WhatsApp (gimnasio, planes, pádel, general, opiniones).
+  address            Calle y número.
+  locality, province Localidad y provincia (también mejoran el título para Google).
+  mapEmbedUrl        (Opcional) src del iframe de Google Maps > Compartir > Insertar un mapa.
+                     Si lo dejás vacío, el mapa se arma automáticamente con la dirección.
+  mapDirectionsUrl   (Opcional) enlace "Compartir" de Google Maps para el botón "Cómo llegar".
+                     Si lo dejás vacío, se arma con la dirección.
+  phone              Teléfono visible. Ej.: "+54 351 555-1234"
+  domain             Dirección de la web con https, sin barra final. Ej.: "https://www.tudominio.com.ar"
+                     (genera la etiqueta canonical y los datos estructurados).
+  hours              Horarios: general (atención), gym (gimnasio), padel (canchas).
+  social             URL completas de Instagram, Facebook, TikTok, YouTube y Perfil de Empresa de Google.
+  padel              Cantidad de canchas, precio por turno, duración, forma de reserva e información adicional.
+  gym.services       Lista de servicios confirmados.
+  gym.plans          Lista de planes (nombre, descripción, precio, frecuencia, horarios).
+  testimonials       Opiniones REALES y autorizadas (texto, autor y, si es real, puntaje de 1 a 5).
+
+Ejemplo de plan:
+  plans: [
+    { name: "Plan Mensual", description: "Acceso libre a la sala.", price: "$ 30.000", frequency: "Por mes", hours: "Lunes a viernes de 8 a 22 h" }
+  ]
+
+
+GOOGLE Y REDES
+--------------
+  - Al crear el Perfil de Empresa de Google, pegá su enlace en social.googleBusiness.
+  - Al publicar la web, completá "domain". Además conviene agregar en el <head> de index.html:
+      <meta property="og:url" content="https://TU-DOMINIO/">
+      <meta property="og:image" content="https://TU-DOMINIO/imagenes/portada-gimnasio.jpg">
+    para que se vea la vista previa al compartir en WhatsApp y redes.
+
+
+PALETA DE COLORES (styles.css, variables al comienzo)
+-----------------------------------------------------
+  Negro grafito  #101113     Amarillo FABE  #F5D900     Plateado metálico #C9CBCC
+  Verde cemento  #626D65     Verde carbón   #242A27     Blanco humo       #F4F4F0
+
+TIPOGRAFÍAS: Montserrat (títulos) y Roboto (textos), desde Google Fonts.
+
+
+PENDIENTES ANTES DE PUBLICAR
+----------------------------
+  [ ] Subir las 12 fotografías reales a imagenes/
+  [ ] Completar WHATSAPP_NUMBER
+  [ ] Completar dirección, localidad y provincia
+  [ ] Completar horarios, teléfono y redes sociales
+  [ ] Completar cantidad de canchas, tarifas y duración de turnos
+  [ ] Completar planes del gimnasio y servicios confirmados
+  [ ] Agregar testimonios reales (opcional)
+  [ ] Completar el dominio y los metadatos og:url / og:image
